@@ -68,6 +68,7 @@ section{
     background-color: transparent;
     color: var(--black);
     cursor: pointer;
+    border-style: solid;
 }
 
 .example::after{
@@ -96,5 +97,6 @@ section{
 
 .example:hover, .example:hover {
     color: var(--darkred);
+    border-color: var(--darkred);
 }
 

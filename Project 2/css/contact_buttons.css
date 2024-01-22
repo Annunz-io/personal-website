@@ -10,15 +10,16 @@
     background-color: transparent;
     color: var(--black);
     cursor: pointer;
+    border-style: solid;
 }
 
 .contact_button::after, .resume_button::after {
     content: "";
     position: absolute;
     background-color: var(--teagrey);
-    top: -10%;
+    top: -15%;
     left: 4.75%;
-    height: 0.25rem;
+    height: 0.30rem;
     width: 90%;
     transition: 0.3s;
 }
@@ -27,9 +28,9 @@
     content: "";
     position: absolute;
     background-color: var(--teagrey);
-    bottom: -10%;
+    bottom: -15%;
     left: 4.75%;
-    height: 0.25rem;
+    height: 0.30rem;
     width: 90%;
     transition: 0.6s;
 }
@@ -42,5 +43,6 @@
 .contact_button:hover, .contact_button:hover,
 .resume_button:hover, .resume_button:hover {
     color: var(--darkred);
+    border-color: var(--darkred);
 }
 
