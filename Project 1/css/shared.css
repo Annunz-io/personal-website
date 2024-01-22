@@ -1,0 +1,14 @@
+a {
+    color: var(--dkblue);
+}
+
+a:hover {
+    color: var(--hotmag);
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+

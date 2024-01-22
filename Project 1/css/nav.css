@@ -1,0 +1,74 @@
+
+
+nav {
+    font-family: "Oygen-mono";
+    padding: 1rem;
+    font-size: 120%
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.fa-linkedin{
+
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--aqua);
+
+}
+
+nav ul [class*="fa-brands"]{
+    color: var(--aqua);
+}
+nav a:hover, nav i:hover {
+    color: var(--magenta);
+}
+
+.button{
+    background-color: #0d314b;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+.button:hover{
+    color: var(--white);
+    background-color: #255f88;
+}
+
+
+@media (min-width: 850px){
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child{
+        flex-basis: auto;
+        text-align: left;
+        margin-right:auto;
+    }
+}

@@ -1,0 +1,27 @@
+#intro {
+    padding-bottom: 10rem;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--mono);
+    font-size: 1.5rem;
+}
+
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--aqua);
+    display: block;
+}
+
+#intro h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+
