@@ -1,0 +1,32 @@
+:root[data-theme = "light"] {
+    --page-bkg: rgb(196, 208, 199);
+    --hover-color: #299675;
+    --primary-text-color: #211D1DFF;
+}
+
+:root[data-theme = "dark"] {
+    --page-bkg: rgb(35, 44, 51);
+    --hover-color: #6bb4b0;
+    --primary-text-color: #bbb4b4;
+}
+
+:root{
+    --primary-font-type: 'Bakemono Stereo', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+/**{border: 1px solid rgb(140, 116, 50);}*/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+
+

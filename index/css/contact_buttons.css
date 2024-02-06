@@ -1,14 +1,15 @@
 .contact_button,
 .resume_button {
     margin-top: 10px;
-    font-family: var(--bake);
+    font-family: var(--primary-font-type);
     position: relative;
     width: 4.5em;
     padding: 3px;
     font-size: 16px;
     border-radius: 0.3em;
+    border-color: var(--primary-text-color);
     background-color: transparent;
-    color: var(--black);
+    color: var(--primary-text-color);
     cursor: pointer;
     border-style: solid;
 }
@@ -16,33 +17,34 @@
 .contact_button::after, .resume_button::after {
     content: "";
     position: absolute;
-    background-color: var(--teagrey);
+    background-color: var(--page-bkg);
     top: -15%;
     left: 4.75%;
     height: 0.30rem;
     width: 90%;
-    transition: 0.3s;
 }
 
 .contact_button::before, .resume_button::before {
     content: "";
     position: absolute;
-    background-color: var(--teagrey);
+    background-color: var(--page-bkg);
     bottom: -15%;
     left: 4.75%;
     height: 0.30rem;
     width: 90%;
-    transition: 0.6s;
 }
 
 .contact_button:hover::before, .contact_button:hover::after,
 .resume_button:hover::before, .resume_button:hover::after {
-    transform: scale(0);
+    opacity: 0;
+    transition: opacity 0.7s
 }
 
 .contact_button:hover, .contact_button:hover,
 .resume_button:hover, .resume_button:hover {
-    color: var(--darkred);
-    border-color: var(--darkred);
+    color: var(--hover-color);
+    border-color: var(--hover-color);
 }
+
+
 

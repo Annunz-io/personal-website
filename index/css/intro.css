@@ -1,20 +1,30 @@
-section{
+section {
     margin-left: 1.2rem;
     margin-right: 1.2rem;
+    margin-top: -3rem;
+
+    color: var(--primary-text-color);
 }
 
 .greeting {
-    font-size: 1.1rem;
+    font-weight: 550;
+    font-size: 1rem;
 }
 
-.greeting span{
-    display: block;
-    margin-top: 1rem;
+.greeting p:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.greeting p:nth-child(2) {
     font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
 .image_container {
-    rotate: 2deg;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -22,81 +32,86 @@ section{
     margin-right: 1rem;
 }
 
-.image_crop_container{
+.image_crop_container {
     position: relative;
     border-radius: 4%;
     overflow: hidden;
-    height: 190px;
+    height: 185px;
     width: auto;
 }
 
-.image_crop_container img{
+.image_crop_container img {
     height: 250px;
     width: auto;
     margin-top: -60px;
-    transition: transform 0.5s ease;
 }
 
-.image_crop_container:hover  {
+.image_crop_container:hover {
     animation: bounce 0.9s ease;
 }
 
-@keyframes bounce{
-    0%, 20%, 50% , 80% ,100% {
+@keyframes bounce {
+    0%, 100% {
         transform: scale(1);
     }
     40% {
-        transform: scale(0.93);
+        transform: scale(0.95);
     }
     60% {
-        transform: scale(1.04);
+        transform: scale(1.03);
     }
 }
 
-.contact_container{
+
+
+.contact_container {
     display: flex;
     gap: 2em;
     margin-right: 0.5em;
 }
 
-.example{
+.example {
     position: relative;
     width: 4.5em;
     padding: 3px;
     font-size: 16px;
     border-radius: 0.3em;
     background-color: transparent;
-    color: var(--black);
+    color: var(--primary-text-color);
+    border-color: var(--primary-text-color);
     cursor: pointer;
     border-style: solid;
 }
 
-.example::after{
+.example::after {
     content: "";
     position: absolute;
-    background-color: var(--teagrey);
+    background-color: var(--page-bkg);
     top: -10%;
     left: 4.75%;
     height: 0.25rem;
     width: 90%;
-    transition: 0.3s;
 }
-.example::before{
+
+.example::before {
     content: "";
     position: absolute;
-    background-color: var(--teagrey);
+    background-color: var(--page-bkg);
     bottom: -10%;
     left: 4.75%;
     height: 0.25rem;
     width: 90%;
-    transition: 0.6s;
 }
+
 .example:hover::before, .example:hover::after {
-    transform: scale(0);
+    opacity: 0;
+    transition: opacity 0.7s
 }
 
 .example:hover, .example:hover {
-    color: var(--darkred);
-    border-color: var(--darkred);
+    color: var(--hover-color);
+    border-color: var(--hover-color);
 }
+
+
 
