@@ -35,6 +35,13 @@ li.github a:hover, li.linkedin a:hover, li.name a, li.theme div i:hover{
     color: var(--hover-color);
 }
 
+#icon-moon, #icon-sun{
+    height: 1rem;
+    width: auto;
+    display: block;
+}
+
+
 .name{
     color: var(--primary-text-color);
     background-color: var(--page-bkg);
