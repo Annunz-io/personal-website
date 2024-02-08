@@ -65,14 +65,6 @@ function onIconHover(hoverColor, iconColor) {
     sunIcon.addEventListener("mouseleave", function () {
         this.style.fill = iconColor
     })
-
-    moonIcon.addEventListener("mouseenter", function () {
-        this.style.fill = hoverColor
-    })
-    moonIcon.addEventListener("mouseleave", function () {
-        this.style.fill = iconColor
-    })
-
 }
 
 
