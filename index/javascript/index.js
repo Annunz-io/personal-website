@@ -1,8 +1,6 @@
 init()
 
 function init() {
-    //init to light
-    //set a listener
     document.getElementById("icon-sun").style.display = "none";
     document.getElementById("icon-moon").style.display = "block";
     document.querySelector('.theme-container').addEventListener('click', switchTheme)
@@ -10,7 +8,6 @@ function init() {
     const rootElem = document.documentElement;
     let dataTheme = rootElem.getAttribute('data-theme')
     let oppositeComputedThemeColor = getComputedStyle(document.querySelector(":root[data-theme='" + dataTheme + "']"));
-    //we need to init the moon icon to the light theme and then switch the sun to dark theme upon click
     let color = oppositeComputedThemeColor.getPropertyValue('--primary-text-color')
     let hoverColor = oppositeComputedThemeColor.getPropertyValue('--hover-color')
     const moonIcon = document.getElementById('icon-moon')
@@ -29,12 +26,9 @@ function switchTheme() {
     let newTheme = (dataTheme === 'light') ? 'dark' : 'light'
     rootElem.setAttribute('data-theme', newTheme)
     let computedStyle = getComputedStyle(document.querySelector(":root[data-theme='" + newTheme + "']"));
-    // let selectedElement = document.querySelector(`[data-theme="${newTheme}"]`);
-    // let computedStyle = getComputedStyle(selectedElement)
     let iconColor = computedStyle.getPropertyValue('--primary-text-color')
     let hoverColor = computedStyle.getPropertyValue('--hover-color')
 
-    //get computed style for dark icon
 
     switchIcon(newTheme, iconColor)
     onIconHover(hoverColor, iconColor)
