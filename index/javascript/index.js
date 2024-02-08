@@ -19,7 +19,7 @@ function init() {
         this.style.fill = hoverColor
     })
     moonIcon.addEventListener("mouseleave", function () {
-        this.style.fill = iconColor
+        this.style.fill = color
     })
 }
 
