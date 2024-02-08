@@ -12,7 +12,15 @@ function init() {
     let oppositeComputedThemeColor = getComputedStyle(document.querySelector(":root[data-theme='" + dataTheme + "']"));
     //we need to init the moon icon to the light theme and then switch the sun to dark theme upon click
     let color = oppositeComputedThemeColor.getPropertyValue('--primary-text-color')
-    document.getElementById('icon-moon').style.fill =  color
+    let hoverColor = oppositeComputedThemeColor.getPropertyValue('--hover-color')
+    const moonIcon = document.getElementById('icon-moon')
+    moonIcon.style.fill = color
+    moonIcon.addEventListener("mouseenter", function () {
+        this.style.fill = hoverColor
+    })
+    moonIcon.addEventListener("mouseleave", function () {
+        this.style.fill = iconColor
+    })
 }
 
 function switchTheme() {
@@ -23,11 +31,13 @@ function switchTheme() {
     let computedStyle = getComputedStyle(document.querySelector(":root[data-theme='" + newTheme + "']"));
     // let selectedElement = document.querySelector(`[data-theme="${newTheme}"]`);
     // let computedStyle = getComputedStyle(selectedElement)
-    let color = computedStyle.getPropertyValue('--primary-text-color')
+    let iconColor = computedStyle.getPropertyValue('--primary-text-color')
+    let hoverColor = computedStyle.getPropertyValue('--hover-color')
 
     //get computed style for dark icon
 
-    switchIcon(newTheme, color)
+    switchIcon(newTheme, iconColor)
+    onIconHover(hoverColor, iconColor)
 }
 
 function switchIcon(newTheme, color) {
@@ -45,6 +55,25 @@ function switchIcon(newTheme, color) {
     }
 }
 
+function onIconHover(hoverColor, iconColor) {
+    let sunIcon = document.getElementById('icon-sun')
+    let moonIcon = document.getElementById('icon-moon')
+
+    sunIcon.addEventListener("mouseenter", function () {
+        this.style.fill = hoverColor
+    })
+    sunIcon.addEventListener("mouseleave", function () {
+        this.style.fill = iconColor
+    })
+
+    moonIcon.addEventListener("mouseenter", function () {
+        this.style.fill = hoverColor
+    })
+    moonIcon.addEventListener("mouseleave", function () {
+        this.style.fill = iconColor
+    })
+
+}
 
 
 
