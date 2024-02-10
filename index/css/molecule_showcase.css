@@ -1,6 +1,5 @@
-.molecule{
 
-}
+
 .molecule img {
     height: 10rem;
     width: auto;
@@ -8,12 +7,10 @@
 }
 .molecule div {
    margin: -0.2rem;
-
 }
 
 .molecule p a {
     text-decoration: none;
-
 }
 
 .molecule p a:hover {
@@ -23,27 +20,25 @@
 .molecules-container {
     display: flex;
     gap: 2.5rem;
-
 }
 
 .macrocycle-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .piperdine-urea-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .molecules-container p {
+    display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0.4rem;
 }
 
 .molecule-description {
     font-weight: bold;
-
 }

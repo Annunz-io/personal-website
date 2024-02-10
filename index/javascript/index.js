@@ -5,19 +5,24 @@ function init() {
     document.getElementById("icon-moon").style.display = "block";
     document.querySelector('.theme-container').addEventListener('click', switchTheme)
 
-    const rootElem = document.documentElement;
-    let dataTheme = rootElem.getAttribute('data-theme')
+    let dataTheme = document.documentElement.getAttribute('data-theme')
     let oppositeComputedThemeColor = getComputedStyle(document.querySelector(":root[data-theme='" + dataTheme + "']"));
-    let color = oppositeComputedThemeColor.getPropertyValue('--primary-text-color')
+    let oppositeColor = oppositeComputedThemeColor.getPropertyValue('--primary-text-color')
     let hoverColor = oppositeComputedThemeColor.getPropertyValue('--hover-color')
+    //set icons
     const moonIcon = document.getElementById('icon-moon')
-    moonIcon.style.fill = color
+    moonIcon.style.fill = oppositeColor
     moonIcon.addEventListener("mouseenter", function () {
         this.style.fill = hoverColor
     })
     moonIcon.addEventListener("mouseleave", function () {
-        this.style.fill = color
+        this.style.fill = oppositeColor
     })
+    //set images
+    const macrocycle = document.querySelector('.macrocycle-container').querySelector('img')
+    const piperdineUrea = document.querySelector('.piperdine-urea-container').querySelector('img')
+    macrocycle.src = "images/difluoromacrocycle-light.svg"
+    piperdineUrea.src = "images/piperdineurea-light.svg"
 }
 
 function switchTheme() {
@@ -46,6 +51,7 @@ function switchIcon(newTheme, color) {
         sunIcon.style.display = "block";
         sunIcon.style.fill = color;
     }
+    changeSVGColor(newTheme)
 }
 
 function onIconHover(hoverColor, iconColor) {
@@ -59,9 +65,16 @@ function onIconHover(hoverColor, iconColor) {
     })
 }
 
-function changesvgcolor(){
-    let x = document.querySelector(".hello")
-    x.style.stroke = "#e12e2e"
-    x.style.strokeWidth = "2rem"
+function changeSVGColor(newTheme) {
+    const macrocycle = document.querySelector('.macrocycle-container').querySelector('img')
+    const piperdineUrea = document.querySelector('.piperdine-urea-container').querySelector('img')
+    if (newTheme === 'light') {
+        macrocycle.src = "images/difluoromacrocycle-light.svg"
+        piperdineUrea.src = "images/piperdineurea-light.svg"
+    } else if (newTheme === 'dark') {
+        macrocycle.src = "images/difluoromacrocycle-dark.svg"
+        piperdineUrea.src = "images/piperdineurea-dark.svg"
+    }
 }
-changesvgcolor()
+
+
