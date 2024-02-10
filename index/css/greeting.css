@@ -2,13 +2,16 @@ section {
     margin-left: 1.2rem;
     margin-right: 1.2rem;
     margin-top: -3rem;
-
     color: var(--primary-text-color);
 }
 
 .greeting {
     font-weight: 550;
     font-size: 1rem;
+}
+
+.greeting-section{
+    margin-bottom: 2rem;
 }
 
 .greeting p:first-child {
@@ -24,6 +27,14 @@ section {
     padding: 0;
 }
 
+.greeting p:nth-child(6) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.greeting p:nth-child(6) span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 .image_container {
     display: flex;
     flex-direction: column;
@@ -61,8 +72,6 @@ section {
         transform: scale(1.03);
     }
 }
-
-
 
 .contact_container {
     display: flex;

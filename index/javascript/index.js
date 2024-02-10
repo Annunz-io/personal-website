@@ -29,7 +29,6 @@ function switchTheme() {
     let iconColor = computedStyle.getPropertyValue('--primary-text-color')
     let hoverColor = computedStyle.getPropertyValue('--hover-color')
 
-
     switchIcon(newTheme, iconColor)
     onIconHover(hoverColor, iconColor)
 }
@@ -51,7 +50,6 @@ function switchIcon(newTheme, color) {
 
 function onIconHover(hoverColor, iconColor) {
     let sunIcon = document.getElementById('icon-sun')
-    let moonIcon = document.getElementById('icon-moon')
 
     sunIcon.addEventListener("mouseenter", function () {
         this.style.fill = hoverColor
@@ -61,5 +59,9 @@ function onIconHover(hoverColor, iconColor) {
     })
 }
 
-
-
+function changesvgcolor(){
+    let x = document.querySelector(".hello")
+    x.style.stroke = "#e12e2e"
+    x.style.strokeWidth = "2rem"
+}
+changesvgcolor()
