@@ -2,12 +2,17 @@
     --page-bkg: rgb(196, 208, 199);
     --hover-color: #299675;
     --primary-text-color: #211D1DFF;
+    --on-click-border-color: #5D7C73FF;
+    --patent-no-color: #34816b;
+    /*4C7259FF*/
 }
 
 :root[data-theme = "dark"] {
     --page-bkg: rgb(35, 44, 51);
     --hover-color: #6bb4b0;
     --primary-text-color: #bbb4b4;
+    --on-click-border-color: #4b6273;
+    --patent-no-color: #6b7683;
 }
 
 :root{

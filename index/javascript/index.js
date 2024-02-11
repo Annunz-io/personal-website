@@ -77,4 +77,15 @@ function changeSVGColor(newTheme) {
     }
 }
 
+function onImageClick(){
+    const macrocycle = document.querySelector('.macrocycle-container').querySelector('img')
+    const piperdineUrea = document.querySelector('.piperdine-urea-container').querySelector('img')
 
+    macrocycle.addEventListener('click', function(){
+        macrocycle.style.animation = "wiggle 0.5s ease-in-out alternate"
+    })
+
+}
+
+
+onImageClick()
