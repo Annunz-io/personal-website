@@ -55,6 +55,7 @@ section {
     height: 250px;
     width: auto;
     margin-top: -60px;
+    user-select: none;
 }
 
 .image_crop_container:hover {

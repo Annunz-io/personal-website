@@ -4,6 +4,7 @@
     height: 10rem;
     width: auto;
     margin-top: 0.2rem;
+    user-select: none;
 }
 .molecule div {
    margin: -0.2rem;
